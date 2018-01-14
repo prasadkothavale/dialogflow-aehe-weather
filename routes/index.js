@@ -17,7 +17,7 @@ router.get('/helloHttp', function (req, res, next) {
 })
 
 router.post('/helloHttp', function (req, res, next) {
-  let response = 'This is sample POST response from webhook';
+  let response = req.body;
 
   res.setHeader('Content-Type', 'application/json'); //Requires application/json MIME type
   res.send(JSON.stringify({
